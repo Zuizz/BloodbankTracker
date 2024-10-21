@@ -1,6 +1,7 @@
 package com.main;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -26,7 +27,7 @@ public class home implements ActionListener{
 	
 	JPanel redpan = new JPanel();
 	
-	
+	Font font = new Font("Serif",Font.PLAIN,20);
 	
 	Border blackline = BorderFactory.createLineBorder(Color.black); 
 	
@@ -35,17 +36,23 @@ public class home implements ActionListener{
 	JButton bbutton = new JButton();
 	JButton vbutton = new JButton();
 	home(){
-
 		
+		lab.setFont(new Font("Serif",Font.PLAIN,18));
+		head.setForeground(Color.white);
+		
+		head.setFont(font);
+		Nlabel.setFont(font);
+		Vlabel.setFont(font);
+		Blabel.setFont(font);
 		
 		lab.setBounds(10,73,420,30);
 
 		
 		//buttons
 		
-		nbutton.setBounds(0,100,420,60);
-		bbutton.setBounds(0,160,420,60);
-		vbutton.setBounds(0,220,420,60);
+		nbutton.setBounds(0,110,620,100);
+		bbutton.setBounds(0,220,620,100);
+		vbutton.setBounds(0,330,620,100);
 		bbutton.addActionListener(this);
 		nbutton.addActionListener(this);		
 		vbutton.addActionListener(this);
@@ -54,7 +61,7 @@ public class home implements ActionListener{
 		//header
 		head.setBounds(0,25,60,20);
 		welcomeLabel.setBounds(0, 0, 200, 25);
-		redpan.setBounds(0,0,420,70);
+		redpan.setBounds(0,0,620,70);
 		
 	
 
@@ -79,9 +86,9 @@ public class home implements ActionListener{
 		frame.add(welcomeLabel);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(null);
-		frame.setSize(420,420);
+		frame.setSize(620,620);
 		frame.setVisible(true);
-				
+		frame.setLocationRelativeTo(null);		
 		
 		
 		

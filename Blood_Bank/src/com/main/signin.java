@@ -49,6 +49,7 @@ public class signin implements ActionListener{
 		frame.setLayout(null);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);		
 	}
 
 	@Override
